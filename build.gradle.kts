@@ -21,20 +21,18 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-graphql")
-	implementation("org.springframework.boot:spring-boot-starter-webclient")
-	implementation("org.springframework.boot:spring-boot-starter-webflux")
-	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.3")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("tools.jackson.module:jackson-module-kotlin")
+	implementation("io.jsonwebtoken:jjwt-api:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.6")
 	runtimeOnly("org.postgresql:postgresql")
-	testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
-	testImplementation("org.springframework.boot:spring-boot-starter-graphql-test")
-	testImplementation("org.springframework.boot:spring-boot-starter-webclient-test")
-	testImplementation("org.springframework.boot:spring-boot-starter-webflux-test")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
